@@ -37,3 +37,15 @@ prod <a href="ethereum:0x732015730552f0de09dd586e6b0394321fd44f49/transfer?addre
 Bartercard Qoin <a href="ethereum:0x60fa213f48cd0d83b54380108ccd03a6993247e0/transfer">Send</a>
 </body>
 <html>
+  
+<h1>Recording Event From Web View</h1>
+<div id="main">
+ <button id="recordEvent" onclick="recordEvent()"> Record Event </button>
+</div>
+<script type="text/javascript">
+ function recordEvent(){
+ var eventName = "af_purchase"
+ var eventParams = "{\"af_revenue\":\"6.72\", \"af_content_type\": \"wallets\", \"af_content_id\": \"15854\"}";
+ app.recordEvent(eventName, eventParams)
+}
+</script>
